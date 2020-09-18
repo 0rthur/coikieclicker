@@ -22,7 +22,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1>Clicker</h1>
-          <p>Score: <span id="score">32</span></p>
+          <p>Score: <span id="score"></span></p>
           <div id='cookie' onclick="cookieClick();">
            <img width="500px" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg">
           </div>
@@ -32,14 +32,15 @@
     <script type="text/javascript">
       let score = 0;
 
-      const updateScore = function(newScore = 0) {
-        document.getElementById('score').innerHTML = newScore;
+      const updateScore = function() {
+        document.getElementById('score').innerHTML = score;
       }
-      
+
       const cookieClick = function() {
         score = score + 1;
-        updateScore(score);
+        updateScore();
       }
+            updateScore();
     </script>
   </body>
 </html>
